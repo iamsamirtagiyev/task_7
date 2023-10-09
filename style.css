@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+nav .logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .menu li a {
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+    transition: all .5s ease;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+nav .menu li a:hover {
+    color: rgb(255, 255, 255);
+}
+section {
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section h1 {
+    position: relative;
+    font-size: 40px;
+    color: rgba(255, 255, 255, .8);
+    width: 550px;
+    text-align: center;
+}
+
+section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 3px;
+    border-radius: 50px;
+    background: orange;
+}
+
+section p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, .8);
+    width: 750px;
+    text-align: center;
+}
+
+section button {
+    font-size: 18px;
+    font-family: 500;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: orange;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+section button:hover {
+    background: rgb(175, 119, 15);
+}
+#about{
+    background: rgb(238, 163, 25);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#about h1 {
+    position: relative;
+    font-size: 40px;
+    color: #fff;
+    width: 550px;
+    text-align: center;
+}
+
+#about h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 3px;
+    border-radius: 50px;
+    background: #fff;
+}
+#about p {
+    font-size: 20px;
+    color: #fff;
+    width: 750px;
+    text-align: center;
+}
+
+#about button {
+    font-size: 18px;
+    font-family: 500;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+    transition: all .5s ease;
+}
+
+#about button:hover {
+    background: #b9b9b9;
+}
+#services{
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#services h1 {
+    position: relative;
+    font-size: 40px;
+    color: #000;
+    width: 550px;
+    text-align: center;
+}
+
+#services h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 3px;
+    border-radius: 50px;
+    background: orange;
+}
+.icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 85px;
+}
+.icon{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.icon i{
+    font-size: 50px;
+    color: orange;
+}
+.icon p{
+    width: 200px;
+    text-align: center;
+}
+#portfolio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.image{
+    width: 449px;
+    height: 300px;
+    position: relative;
+}
+#portfolio img{
+    width: 449px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+}
+#portfolio .image::before{
+    content: 'Project Name';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 163, 25, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+#portfolio .image:hover::before{
+    opacity: 1;
+}
+.download{
+    width: 100%;
+    height: 300px;
+    background: rgb(15, 45, 100);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.download button{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .5s ese;
+}
+.download button:hover{
+    background: #c9c8c8;
+}
+
+#contact{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#contact h1 {
+    position: relative;
+    font-size: 35px;
+    color: #000;
+    width: 550px;
+    text-align: center;
+}
+
+#contact h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 3px;
+    border-radius: 50px;
+    background: orange;
+}
+#contact p {
+    font-size: 18px;
+    color: #000;
+    width: 750px;
+    text-align: center;
+}
+.input-box{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-box input{
+    width: 100%;
+    outline: none;
+    border: solid 2px rgba(0, 0, 0, .7);
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.input-box textarea{
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: solid 2px rgba(0, 0, 0, .7);
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.input-box button{
+    font-size: 25px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: rgba(238, 163, 25, .3);
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    gap: 20px;
+    padding: 20px;
+}
+.phone i{
+    color: orange;
+    font-size: 30px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+}
